@@ -1,8 +1,9 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { SideBar } from '../components/SideBar';
 
 export default class MyDocumnet extends Document {
     render() {
-        return(
+        return (
             <Html>
                 <Head>
                     <link rel="shortcut icon" href="favicon.png" type="image/png" />
@@ -13,11 +14,10 @@ export default class MyDocumnet extends Document {
 
                 <body>
                     <Main />
+                    
                     <NextScript />
                 </body>
             </Html>
-
-
         );
     }
 }

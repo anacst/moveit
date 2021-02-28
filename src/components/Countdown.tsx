@@ -1,12 +1,13 @@
 import { useContext } from 'react';
 import { CountdownContext } from '../contexts/CountdownContext';
-
+import { Play, X, CheckCircle } from 'react-feather';
 import styles from '../styles/components/Countdown.module.css'
 
 export function Countdown() {
     const { 
         minutes, 
-        seconds, 
+        seconds,
+        timeProgress,
         hasFinished, 
         isActive, 
         startCountdown, 
@@ -36,17 +37,20 @@ export function Countdown() {
                     className={styles.countdownButton}
                 >
                     Ciclo encerrado
+                    <CheckCircle />
                 </button>
             ) : (
                 <>
                     { isActive ? (
-                        <button 
-                            type="button"
-                            className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
-                            onClick={resetCountdown}
-                        >
-                            Abandonar ciclo
-                        </button>
+                            <button 
+                                type="button"
+                                className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
+                                onClick={resetCountdown}
+                            >
+                                Abandonar ciclo
+                                <X />
+                                <div style={{ width: `${timeProgress}%` }} />
+                            </button>
                     ) : (
                         <button 
                             type="button"
@@ -54,6 +58,7 @@ export function Countdown() {
                             onClick={startCountdown}
                         >
                             Iniciar um ciclo
+                            <Play />
                         </button>
                     )}
                 </>

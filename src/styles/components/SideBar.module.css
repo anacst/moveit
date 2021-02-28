@@ -1,0 +1,35 @@
+.sideBarContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 112px;
+    height: 100%;
+    background: var(--white);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sideBarContainer img {
+    position: absolute;
+    top: 2rem;
+}
+
+.sideBarContainer button {
+    background: transparent;
+    border: 0px;
+    padding: 1rem;
+    font-size: 0px;
+
+    border-left-color: var(--blue-dark);
+}
+
+.sideBarContainer button svg {
+    height: 32px;
+    width: 32px;
+
+    stroke: var(--text);      
+}

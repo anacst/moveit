@@ -1,0 +1,65 @@
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-content: left;
+}
+
+.loginContainer strong {
+    font-size: 2.25rem;
+    color: var(--white);
+}
+
+.loginContainer p {
+    font-size: 1.25rem;
+    color: var(--text-highlight);
+    margin-top: 0.25rem;
+}
+
+.loginContainer form div {
+    display: flex;
+
+    height: 5rem;
+
+    border: 0;
+    padding: 0;
+}
+
+.loginContainer input {
+    height: 100%;
+
+    font-size: 1.25rem;
+    padding-left: 2rem;
+
+    border: 1.5px solid transparent;
+    border-radius: 5px 0 0 5px;
+
+    color: var(--white);
+    caret-color: white;
+
+    background-image: linear-gradient(to right, var(--blue-dark), rgba(73, 83, 184, 0.8));
+}
+
+.loginContainer input::placeholder {
+    color: var(--text-highlight);
+    opacity: 1;
+}
+
+.loginContainer input:focus::placeholder {
+    color: transparent;
+}
+
+.loginContainer input:focus {
+    border: 1.5px solid var(--blue-dark);
+    outline: none;
+}
+
+.loginContainer form button {
+    width: 5rem;
+    height: 100%;
+
+    color: var(--white);
+    border: 0px;
+    border-radius: 0 5px 5px 0;
+    background: var(--blue-dark);
+}
